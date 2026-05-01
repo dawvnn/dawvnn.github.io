@@ -2,18 +2,45 @@ body {
     font-family: Arial;
     background: #f3f4f6;
     margin: 0;
-    display: flex;
-    justify-content: center;   
-    align-items: center;       
-    height: 100vh;            
 }
 
 .container {
     width: 700px;
+    max-width: 95%;
+    margin: 40px auto; 
     padding: 20px;
     background: white;
     border-radius: 10px;
 }
+
+.navbar {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    background: #555;
+}
+
+.navbar a.active {
+    background: white;
+    color: #333;
+    font-weight: bold;
+}
+
 
 h2, #date {
     text-align: center;

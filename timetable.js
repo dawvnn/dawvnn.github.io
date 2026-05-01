@@ -1,5 +1,13 @@
 const btn = document.querySelector(".btn");
 
+const saved=JSON.parse(localStorage.getItem("timetable")) || {};
+const days=["Monday","Tuesday","Wednesday","Thursday","Friday"];
+days.forEach(day=>{
+    if(saved[day]){
+        document.getElementById(day).value=saved[day].join(", ");
+    }
+});
+
 btn.addEventListener("click", () => {
     const days=["Monday","Tuesday","Wednesday","Thursday","Friday"];
 

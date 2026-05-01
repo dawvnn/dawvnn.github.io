@@ -4,6 +4,9 @@ const restbtn=document.querySelector(".resbtn");
 const expb=document.getElementById("exportb");
 const impb=document.getElementById("importb");
 
+ const data=localStorage.getItem("attendance")||"{}";
+expb.value=data;
+
 restbtn.onclick=()=>{
     const backup=localStorage.getItem("attendance_backup");
     if(!backup){
